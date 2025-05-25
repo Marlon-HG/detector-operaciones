@@ -1,6 +1,7 @@
+opencv-python-headless
+pillow
+torch==2.7.0
+torchvision==0.22.0
 fastapi
 uvicorn[standard]
 easyocr
-opencv-python-headless
-pillow
-torch==2.0.1+cpu
