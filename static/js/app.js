@@ -82,7 +82,9 @@ async function enviarImagen() {
   fd.append("file", imagenBlob, "imagen.jpg");
 
   try {
-    const resp = await fetch("/detectar", { method: "POST", body: fd });
+    const resp = await fetch("https://detector-operaciones.onrender.com/detectar", {
+  method: "POST", body: fd
+});
     const data = await resp.json();
     console.log("📑 Payload:", data);
 
