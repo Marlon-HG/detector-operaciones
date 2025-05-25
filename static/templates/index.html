@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detector de Operaciones</title>
+  <link rel="stylesheet" href="/static/css/estilos.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧮 Detector de Operaciones</h1>
+
+    <label for="imagen">Selecciona una imagen:</label>
+    <input type="file" id="imagen" accept="image/*" />
+    <br /><br />
+
+    <button id="btnAbrirCamara">📷 Usar Cámara</button>
+    <button id="btnCapturarFoto" style="display:none;">📸 Capturar Foto</button>
+    <br /><br />
+
+    <video id="video"
+           width="220"
+           autoplay
+           style="display:none; border-radius:10px;"></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <img id="preview"
+         src="#"
+         alt="Vista previa"
+         style="display:none; max-width:100%; border-radius:8px; box-shadow:0 0 6px rgba(0,0,0,0.2);" />
+    <br /><br />
+
+    <div class="botonera">
+      <button id="btnProcesar" onclick="enviarImagen()" disabled>
+        📤 Procesar Imagen
+      </button>
+    </div>
+
+    <div class="resultado" id="resultado" style="display:none; margin-top:20px;">
+      <h3>📊 Resultado</h3>
+      <p><strong>Expresión:</strong> <span id="expresion"></span></p>
+      <p><strong>Resultado:</strong> <span id="resultadoValor"></span></p>
+    </div>
+
+    <p id="mensaje-db" style="display:none; font-weight:bold; margin-top:10px;"></p>
+
+    <img id="debugImage"
+         src="#"
+         alt="Imagen Debug"
+         style="display:none; max-width:100%; margin-top:10px; border:1px solid #ccc;" />
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
